@@ -217,6 +217,7 @@ class Connection
     public function verifyPeer($option = false)
     {
         curl_setopt($this->curl, CURLOPT_SSL_VERIFYPEER, $option);
+        curl_setopt($this->curl, CURLOPT_SSL_VERIFYHOST, $option);
     }
 
     /**
